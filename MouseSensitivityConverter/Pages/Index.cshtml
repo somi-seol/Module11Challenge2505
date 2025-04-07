@@ -1,0 +1,45 @@
+﻿@page
+@model MouseSensitivityConverter.Pages.IndexModel
+@{
+    ViewData["Title"] = "Sensitivity Converter";
+}
+
+<h2>Convert cm/360° to Game Sensitivity</h2>
+
+
+<form method="post">
+    <!-- text field -->
+    <div>
+        <label>cm/360°:</label>
+        <input asp-for="Input.CmPer360" /> 
+        <span asp-validation-for="Input.CmPer360"></span>
+    </div>
+
+    <!-- dropdown -->
+    <div>
+        <label>Game:</label>
+        <select asp-for="Input.SelectedGame">
+            <option value="">-- Select a game --</option> 
+
+            <!-- each game -->
+            @foreach (var game in Model.GameRates.Keys)
+            {
+                <option value="@game">@game</option> 
+            }
+        </select>
+        <span asp-validation-for="Input.SelectedGame"></span>
+    </div>
+
+    <button type="submit">Convert</button>
+</form>
+
+<!-- result display -->
+@if (Model.Input?.Result > 0)
+{
+    <p>Sensitivity for @Model.Input.SelectedGame: <strong>@Model.Input.Result</strong></p>
+}
+
+<!-- validation -->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
