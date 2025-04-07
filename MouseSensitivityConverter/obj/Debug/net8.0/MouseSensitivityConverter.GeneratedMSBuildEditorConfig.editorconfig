@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/workspaces/Module11Challenge2505/MouseSensitivityConverter/Pages/gameslist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvZ2FtZXNsaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/Module11Challenge2505/MouseSensitivityConverter/Pages/howto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvaG93dG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,9 @@
+@page
+@model MouseSensitivityConverter.Pages.IndexModel
+
+<h1>List of Games converted</h1>
+
+    @foreach (var game in Model.GameRates.Keys)
+        {
+            <ul><li="@game">@game</li></ul> <!-- rework (single list) -->
+        }
